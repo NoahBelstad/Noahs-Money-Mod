@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "noahs-money-mod",
+	"version": "${version}",
+	"name": "Noahs Money Mod",
+	"description": "Adds Cool Money System",
+	"authors": [
+		"NoahBelstad!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/noahs-money-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"noahs.money.mod.NoahsMoneyMod"
+		],
+		"client": [
+			"noahs.money.mod.NoahsMoneyModClient"
+		],
+		"fabric-datagen": [
+			"noahs.money.mod.NoahsMoneyModDataGenerator"
+		]
+	},
+	"mixins": [
+		"noahs-money-mod.mixins.json",
+		{
+			"config": "noahs-money-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
